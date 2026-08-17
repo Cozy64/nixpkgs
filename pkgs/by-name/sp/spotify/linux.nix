@@ -2,7 +2,7 @@
   fetchurl,
   lib,
   stdenv,
-  squashfsTools,
+  squashfs-tools,
   libxtst,
   libxscrnsaver,
   libxrender,
@@ -150,7 +150,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     wrapGAppsHook3
     makeShellWrapper
-    squashfsTools
+    squashfs-tools
   ];
 
   dontStrip = true;
@@ -249,7 +249,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = meta // {
     maintainers = with lib.maintainers; [
-      timokau
       ma27
     ];
   };
